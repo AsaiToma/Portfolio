@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About/AsaiToma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./about.css">
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<header>
+  <div class="header-right">
+    <a href="./about.html">about</a>
+    <a href="./index.html">works</a>
+    <a href="./research.html">reserch</a>
+  </div>
+</header>
+
+<body>
+    <div id="loading"></div>
+
+    <div class="top-wrapper">
+      <h1 id="about-text">About</h1>
+    </div>
+
+    <div class="main-wrapper">
+      <div class="contents-wrapper">
+        <div class="profile-wrapper">
+          <h2>プロフィール</h2>
+          <div class="profile-subjects">
+            <p class="subject"><span>名前</span></p>
+            <p class="subject"><span>所属</span></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+          </div>
+
+          <div class="profile-contents">
+            <p class="subject">浅井斗真</p>
+            <p>明治大学大学院</p>
+            <p>先端数理科学研究科</p>
+            <p>先端メディアサイエンス専攻</p>
+            <p>CGエンジニア検定(エキスパート)</p>
+            <p>CGクリエイター検定(エキスパート)</p>
+          </div>
+        </div>
+
+        <div class="paragraph-container">
+          <h1>SKill</h1>
+          <p><br></p>
+          <h3>Unity</h3>
+          <p>
+          大学時代の4年間はゲーム制作の勉強と研究で使用。
+          実際にゲームを制作するだけでなく、既存のゲームシステムの模倣などを行うことで知識をつける。
+          社会人になってから実務で使用。
+          現場で重要な役割をこなす中で、より実践的な知識を身に着ける。
+          特に、実務で担当したアウトゲームでのデータ処理やUIの制御を得意とする。
+          </p>
+
+          <p><br></p>
+          <h3>Processing</h3>
+          <p>
+          大学時代に授業の一環で4年間使用。
+          プログラミングの基礎から応用的なことまで幅広く学習していた。
+          具体的には、ゲームプログラミングからアルゴリズム、画像処理やセンサーを用いたセンシング、WebApiとの連携なども経験した。
+          </p>
+
+          <p><br></p>
+          <h3>Web系 (html, css, php, javascript)</h3>
+          <p>
+          大学の授業内でhtml,css,php,Javascriptに一通り触れたうえで、独学でphpを学習。
+          大学のグループでの発表会では、Web上で動作する共有目覚ましアプリを作成し、その根幹のプログラムを全て担当。
+          その中で、sqLiteやwebAPIなどの実装も経験。
+          </p>
+
+          <p><br></p>
+          <h3>Python</h3>
+          <p>
+          大学での研究で約1年ほど使用。
+          主な実装内容は、機械学習を用いて文章の雰囲気推定。(明るい、暗い、悲しいなど自動で分類)
+          画像からのテキスト抽出など。
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <p>© 2023 Toma Asai</p>
+  </footer>
+
+  <script type="text/javascript">
+    // トップのAboutの文字と，プロフィールなどの文字列を左揃えするためのスクリプト．あとページ遷移も．
+  window.onload=function(){
+    document.getElementById('loading').classList.add('loaded');
+  }
+    $(function() {
+      const $topWidth = $('.top-wrapper').width();
+      const $aboutWidth = $('#about-text').width();
+      const marginLeft=$topWidth/2.0-$aboutWidth/2.0;
+      $('.contents-wrapper').css('margin-left',marginLeft);
+
+      $(window).resize(function() {
+        const $topWidth = $('.top-wrapper').width();
+        const $aboutWidth = $('#about-text').width();
+        const marginLeft=$topWidth/2.0-$aboutWidth/2.0;
+        $('.contents-wrapper').css('margin-left',marginLeft);
+      });
+    });
+  </script>
+</html>

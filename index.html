@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Works/InoueYuzuru</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./work.css">
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<header>
+  <div class="header-right">
+    <a href="./about.html">about</a>
+    <a href="./index.html">works</a>
+    <a href="./research.html">reserch</a>
+  </div>
+
+</header>
+
+<body>
+    <!-- 真っ白→徐々に薄くなってページ遷移をするとき，真っ白にするためのdiv．cssでこいつを真っ白にして上に重ねて徐々に消してる -->
+    <div id="loading">
+    </div>
+
+    <div class="top-wrapper">
+        <h1>Works</h1>
+    </div>
+
+  <div class="works-wrapper">
+    <!-- ページの左半分 -->
+    <div class="left-container">
+      <!-- card-boxのclassで囲われたdivが1セット -->
+      <!-- big-imgのclassをつけるとカードが大きくなる -->
+      <div class="card-box big-img">
+        <a href="./works/W_Humburger.html">
+          <img src="./img/akibaP.jpg" />
+          <div class="text-wrapper">
+            <!-- マウスオーバーしたときに表示される文字 -->
+            <div class="hover-text big-hoverText">HumbergurHumburger</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card-box big-img" >
+        <a href="./works/W_humenMaker.html">
+          <img src="./img/portP.jpg" id="smallImg"/>
+          <div class="text-wrapper">
+            <div class="hover-text">譜面作成ツール</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ページの右半分 -->
+    <div class="right-container">
+      <div class="card-box big-img">
+        <a href="./works/W_novelResearch.html">
+          <img src="./img/tweetChristmasP.jpg" />
+          <div class="text-wrapper">
+            <div class="hover-text">小説BGMシステム</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card-box big-img">
+        <a href="./works/W_kamisibaiResearch.html">
+          <img src="./img/pianoprocessingP.jpg"/>
+          <div class="text-wrapper">
+            <div class="hover-text">紙芝居BGMシステム</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+    //ページ遷移アニメーション．
+window.onload=function(){
+  document.getElementById('loading').classList.add('loaded');
+}
+
+  // 小さいカードの高さ1枚分(smallImg)+{小さいカードの高さ1枚分+間の空白}(smallCard)　を大きいカードの高さに設定し，高さを揃える．
+  // これをしないとbig-img（大きいカード）の高さが微妙にずれる．cssだけで対応の仕方わからなかった．
+  $(function() {
+    const $outerHeight = $('#smallCard').outerHeight(true);
+    const $imgHeight = $('#smallImg').height();
+    $('.big-img').height($outerHeight + $imgHeight);
+
+    $(window).resize(function() {
+      const $outerHeight = $('#smallCard').outerHeight(true);
+      const $imgHeight = $('#smallImg').height();
+      $('.big-img').height($outerHeight + $imgHeight);
+    });
+  });
+</script>
+
+<footer>
+  <p>© 2021 Yuzuru Inoue</p>
+</footer>
+
+</html>
