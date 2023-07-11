@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Works/AsaiToma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./production.css">
+  <!-- <script type="text/javascript" src="./libs/three.js"></script> -->
+  <!-- barba -->
+  <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.6/dist/barba.umd.min.js" crossOrigin></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- IEでbarbaを読むためのpolyfill -->
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver" crossorigin="anonymous" defer></script> -->
+</head>
+
+<header>
+  <div class="header-right">
+    <a href="../about.html">about</a>
+    <a href="../index.html">works</a>
+  </div>
+
+</header>
+
+
+<body data-barba="wrapper">
+  <div data-barba="container" data-barba-namespace="production">
+
+    <div id="loading">
+
+    </div>
+
+    <div class="top-wrapper">
+      <div class="top-img">
+        <div class="black-filter">
+          <p class="page-title">小説BGMシステム</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+        
+      <div class="abst-wrapper">
+        <p>エンタテイメントコンピューティング2020にて発表した<b>「視線計測を用いた音量を操作するBGMシステムの提案とその活用」</b>の中で作成した小説閲覧ツールです．</p>
+        <p>▽論文ダウンロードURL．</p>
+        <a href="https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&item_id=206542&file_id=1&file_no=1"><font size="3">https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&item_id=206542&file_id=1&file_no=1</font></a>
+      </div>
+
+      <div class="abst-wrapper">
+      <h2>概要</h2>
+        <p>小説に BGM を付与し抑揚をつけることで,映像作品と動揺に、より物語への没入感と臨場感が高まることを目的としたシステムです．</p>
+        <p>読み手の視線から小説の進行度を測定し,それに合わせてBGMの音量を自動で操作します．</p>
+        <p>しかし,小説に適したBGMを付与するには,一度小説を読み通して「どんな雰囲気か」「どこで盛り上がるか」などを把握する必要があります．</p>
+        <p>そこで,本システムはBGMの選定や抑揚の推定を<b>自動で行う</b>ということを目指しました. </p>
+        <p>本システムは,小説を解析するための解析システムと,実際に小説を読むためのインタフェースであるリーダーシステムの２つから作られます. </p>
+      </div>
+
+      <div class="abst-wrapper">
+      <h2>・解析システム</h2>
+        <p><b>実装  : Python</b></p>
+        <p>機械学習を用いて,指定された小説の雰囲気を解析します．</p>
+        <p>雰囲気は「明るい」「不安」「感動的」「緊張」の４種類です. </p>
+        <p>システムを起動し,解析したい小説(epubファイル)を選択すると,自動でデータが出力されます. </p>
+        <p>出力されるデータは,雰囲気の種類と,Unityで読み込むために小説の内容を変換したtxtファイルの2種類です. </p>
+      </div>
+
+      <div class="abst-wrapper">
+      <h2>・リーダーシステム</h2>
+        <p><b>実装  : Unity</b></p>
+        <p>BGM の再生と,文書データの表示を行います．</p>
+        <p>文書データは適切な改行とページ分割が行われるように改ざんを行い,ページジャンプの機能も組み込むなど,リーダーとしての機能を損なわないようにしています．</p>
+        <br>
+        <p>BGMは4種類用意されており,ユーザーが読んでいる章に合わせて,解析システムでの結果をもとに再生します. </p>
+        <p>また,システムでは常に視線計測を行っており,ユーザーがどの程度小説を読み進めているのかを判定します. </p>
+        <p>進行度をもとに,物語が盛り上がっている箇所に向けて徐々に音量を上げ,反対に落ち着いた箇所に向かっているのであれば徐々に音量を下げていきます. </p>
+        <p>この推移によって,ユーザーの物語への没入感に違いが出るのか,という観点で実験も行いました. </p>
+        <p>視線の計測には <b>Tobii Eye Tracker 4C</b> という機器を用いています. </p>
+
+      </div>
+
+    <div class="movie-wrapper">
+      <div class="youtube">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/b5Kv9DnVm4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script type="text/javascript">
+  window.onload = function() {
+    document.getElementById('loading').classList.add('loaded');
+  }
+</script>
+
+<footer>
+  <p>© 2021 Yuzuru Inoue</p>
+</footer>
+
+</html>

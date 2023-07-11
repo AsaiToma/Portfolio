@@ -1,0 +1,251 @@
+/* 作品ページのCSS */
+* {
+  box-sizing: border-box;
+}
+
+body,div {
+  margin: 0;
+  font-family: 'Noto Serif JP', serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p{
+  margin:0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ------------------ヘッダー------------------ */
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(246, 248, 250);
+  padding:20px;
+  position :fixed;
+  top: 0;
+  z-index: 8;
+  font-size: 16px;
+}
+
+.header-right{
+  font-family: 'Libre Baskerville', serif;
+  float:right;
+}
+
+.header-right a{
+  color:rgb(180,180,180);
+  padding-left:18px;
+}
+
+.header-right a:hover{
+  color:rgb(200,0,0);
+}
+
+/* ------------------トップ------------------ */
+.top-wrapper{
+  width:100%;
+  margin-top:65px;
+}
+
+.top-img{
+  height:30vh;
+  background-position: center;
+  /* background-size:cover; */
+}
+@media(max-width:670px){
+  .top-img{
+    height:30vh;
+    /* font-size:3.0rem; */
+  }
+}
+
+.black-filter{
+  width:100%;
+  height:100%;
+  background-color: rgb(50,50,50);
+  position: relative;
+}
+
+.page-title{
+  position:absolute;
+  top: 50%;
+  left:0;
+  right:0;
+  margin:0 auto;
+  text-align: center;
+  transform:translateY(-50%);
+  color:white;
+  font-size:35px;
+}
+
+/* ------------------メイン------------------ */
+.main-wrapper{
+  width:70%;
+  margin:0 auto;
+}
+@media(max-width:670px){
+  .main-wrapper{
+    width:90%;
+  }
+}
+
+.abst-wrapper{
+  margin:40px 0;
+  color: rgb(80,80,80);
+}
+
+.abst-wrapper p{
+  margin-bottom:5px;
+  font-size: 1.6rem;
+}
+
+.abst-wrapper a{
+  margin-bottom:5px;
+  font-size: 1.6rem;
+}
+
+.movie-wrapper{
+  margin:50px 0;
+}
+
+.youtube{
+  position:relative;
+  padding-top:56.25%;
+  background-color:rgb(0,0,0);
+  /* text-align:center; */
+}
+.youtube iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.main-wrapper h2{
+  font-size:1.6rem;
+  margin-top:40px;
+  margin-bottom:16px;
+  font-weight:bold;
+  color:rgb(20,20,20);
+}
+
+.profile-subjects{
+  float: left;
+}
+
+.profile-contents{
+  margin-left: 60px;
+}
+
+.profile-wrapper{
+  overflow: hidden;
+}
+
+.profile-wrapper span{
+  color:rgb(160,160,160);
+}
+
+.profile-wrapper p{
+  line-height:22px;
+  color:rgb(60,60,60);
+}
+
+
+.profile-contents a{
+  line-height:22px;
+  color:rgb(20,20,250);
+}
+
+.subject{
+  margin-bottom: 6px;
+}
+
+ul, ol {
+  background: #fcfcfc;
+  padding: 0.5em 0.5em 0.5em 2em;
+  border: solid 3px gray;
+}
+
+ul li, ol li {
+  line-height: 1.5; 
+  padding: 0.5em 0; 
+}
+
+
+/* ------------------画像系------------------ */
+.insert-img{
+  font-size:0;
+}
+
+.insert-img img{
+  width:50%;
+  margin:0;
+  padding:0;
+  margin-bottom:30px;
+}
+
+h2{
+  font-size:1.6rem;
+  margin-top:40px;
+  margin-bottom:16px;
+  font-weight:bold;
+  color:rgb(20,20,20);
+}
+/* ------------------動画系------------------ */
+.play-movie video{
+  width:50%;
+  height:50%;
+  margin:0;
+  padding:0;
+  margin-bottom:30px;
+}
+
+/* ------------------フラクタルページだけで使うクラスのCSS------------------ */
+.fractal img{
+  width:100%;
+  margin-bottom:30px;
+}
+
+/* ------------------フッター------------------ */
+footer{
+  width:100%;
+  background-color:rgba(90,90,90);
+  height:30px;
+  text-align: center;
+  color:rgb(180,180,180);
+  font-size:12px;
+}
+
+footer p{
+  font-family: 'Libre Baskerville', serif;
+  transform:translateY(50%);
+  /* top:50%; */
+}
+
+/* ------------------ページ遷移------------------ */
+#loading{
+   width:100vw;
+   height:100vh;
+   transition: all 1s;
+   background-color:rgb(246,248,250);
+   position:fixed;
+   top:0;
+   left:0;
+   z-index:10;
+ }
+
+ .loaded{
+   opacity:0;
+   visibility:hidden;
+ }

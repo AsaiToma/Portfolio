@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Works/AsaiToma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./production.css">
+  <!-- <script type="text/javascript" src="./libs/three.js"></script> -->
+  <!-- barba -->
+  <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.6/dist/barba.umd.min.js" crossOrigin></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- IEでbarbaを読むためのpolyfill -->
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver" crossorigin="anonymous" defer></script> -->
+</head>
+
+<header>
+  <div class="header-right">
+    <a href="../about.html">about</a>
+    <a href="../index.html">works</a>
+  </div>
+
+</header>
+
+
+<body data-barba="wrapper">
+  <div data-barba="container" data-barba-namespace="production">
+
+    <div id="loading">
+
+    </div>
+
+    <div class="top-wrapper">
+      <div class="top-img">
+        <div class="black-filter">
+          <p class="page-title">Relic Strike</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <div class="profile-wrapper">
+          <h2>概要</h2>
+          <div class="profile-subjects">
+            <p class="subject"><span>ゲームタイトル : </span></p>
+            <p class="subject"><span>使用ツール     : </span></p>
+            <p class="subject"><span>対応機種       : </span></p>
+            <p class="subject"><span>ジャンル       : </span></p>
+            <p class="subject"><span>ストアページ   : </span></p>
+            <p class="subject"><span>トレーラー   : </span></p>
+
+            <br>
+            <br>
+
+            <p class="subject"><span>チーム人数     : </span></p>
+            <p class="subject"><br></p>
+            <p class="subject"><br></p>
+            <p class="subject"><br></p>
+            <p class="subject"><br></p>
+            <p class="subject"><span>製作期間     : </span></p>
+            <p class="subject"><span>担当内容     : </span></p>
+            <p class="subject"><br></p>
+            <p class="subject"><br></p>
+          </div>
+
+          <div class="profile-contents">
+            <p class="subject">Relic Strike</p>
+            <p class="subject">Unity</p>
+            <p class="subject">Android, iOS</p>
+            <p class="subject">ローグライクシューティングアクション</p>
+            <p class="subject"><a href=https://play.google.com/store/apps/details?id=com.square_enix.android_googleplay.rogueww&hl=ja&gl=US target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.square_enix.android_googleplay.rogueww&hl=ja&gl=US</a></p>
+            <p class="subject"><a href=https://youtu.be/L8P6GoF36NI target="_blank" rel="noopener">https://youtu.be/L8P6GoF36NI</a></p>
+
+            <br>
+            <br>
+
+            <p class="subject">ディレクター 1名</p>
+            <p class="subject">プログラマ(クライアント) 3～7名(自分)</p>
+            <p class="subject">プログラマ(サーバー) 3～6名(自分)</p>
+            <p class="subject">プランナー　　 10名</p>
+            <p class="subject">デザイナー　 15名</p>
+            <p class="subject">約23ヶ月 (2021/05 ～　2023/03)</p>
+            <p class="subject">企画調整, スケジュール調整, アートリソース確認</p>
+            <p class="subject">アウトゲーム実装, インゲームUI実装, マスターデータ管理</p>
+            <p class="subject">デバッグ, ビルドおよび実機テスト</p>
+          </div>
+        </div>
+
+     <div class="abst-wrapper">
+       <p>クライアントサイドのアウトゲーム全般を担当し,システムの実装,UIの挙動の作成,アートリソースやマスターデータのチェックや管理を任されておりました.</p>
+       <p>また,アウトゲームに関して他セクションとの窓口のような役割も任され,実装状況やデータの扱い,仕様の変更などの質問に対応していました.</p>
+       <p>以下に自分が担当した画面, 機能に関して記述します.</p>
+       <div class="play-movie"> <video src="../img/movie_004.mp4" controls loop></video></div>
+     </div>
+
+    <div class="abst-wrapper">
+      <h2>・ホーム画面</h2>
+      <p>ゲーム起動後最初に遷移する画面で,ダンジョンを選択しインゲームへと遷移することができます.</p>
+      <p>その他にもログインボーナスやデイリーミッション,放置機能や各種設定機能を開くことができます.</p>
+      <br>
+      <p><b>担当機能</b></p>
+      <ul>
+          <li>3D描画およびダンジョン選択機能</li>
+          <li>難易度変更機能</li>
+          <li>ダンジョン情報ダイアログ</li>
+          <li>放置報酬機能</li>
+          <li>ランキング画面機能</li>
+          <li>ダンジョンスキップ</li>
+          <li>デイリーミッション</li>
+          <li>スタートミッション</li>
+          <li>メール確認ウィンドウ</li>
+          <li>インゲームへの遷移処理</li>
+      </ul>
+    </div>
+
+    <div class="abst-wrapper">
+      <h2>・編成育成画面</h2>
+      <p>所持している装備とアイテムの一覧や,キャラクターのステータスと装備編成を確認,編集する画面です.</p>
+      <p>編成育成画面からはキャラクター育成画面,パーティ編成面,マテリア編成画面,装備強化画面へ遷移することができます.</p>
+      <br>
+      <p><b>担当機能</b></p>
+      <ul>
+          <li>編成育成画面TOP描画</li>
+          <li>装備変更機能</li>
+          <li>各種装備詳細ダイアログ</li>
+          <li>キャラクターパラメータダイアログ</li>
+          <li>他画面への遷移機能</li>
+          <br>
+          <li>キャラクター育成画面描画</li>
+          <li>キャラクター強化,進化機能</li>
+          <li>キャラクター強化,進化時の演出組み込み</li>
+          <br>
+          <li>パーティ編成画面描画</li>
+          <li>パーティ入れ替え機能</li>
+          <li>レベルスキルやパッシブスキルなどのパラメータ表示</li>
+          <br>
+          <li>マテリア編成画面描画</li>
+      </ul>
+    </div>
+
+    <div class="abst-wrapper">
+      <h2>・イベント画面</h2>
+      <p>開催中の期間限定,曜日限定ダンジョンの確認,選択が可能な画面です.</p>
+      <p>サーバーから受け取った情報をもとに,リアルタイムで開催ダンジョンの切り替えを行います.</p>
+      <br>
+      <p><b>担当機能</b></p>
+      <ul>
+          <li>イベント画面の描画</li>
+          <li>各種バナーの表示</li>
+          <li>各種ダンジョンの詳細ダイアログ</li>
+          <li>各種ダンジョンの報酬確認ダイアログ</li>
+          <li>インゲームへの遷移処理</li>
+      </ul>
+    </div>
+
+    <div class="abst-wrapper">
+      <h2>・街画面</h2>
+      <p>画面内に7つの施設が並び,それぞれの施設ではゲームを有効に進めるための様々な恩恵を受けることができます.</p>
+      <p>施設はメインダンジョンの進行によって解放されていき,個別に強化することで恩恵の量を増やすことができます.</p>
+      <br>
+      <p><b>担当機能</b></p>
+      <ul>
+          <li>街画面描画,演出</li>
+          <li>施設の強化状況に応じた見た目の変更</li>
+          <li>各施設の強化機能</li>
+          <li>キャラクターステータス強化機能,機能</li>
+          <li>アチーブメント機能</li>
+          <li>装備強化機能,演出</li>
+          <li>装備グレードアップ機能,演出</li>
+          <li>装備売却機能</li>
+          <li>ゲーム内通過ショップ機能</li>
+      </ul>
+    </div>
+
+    <div class="abst-wrapper">
+      <h2>・その他</h2>
+      <ul>
+          <li>ヘッダー,フッター実装</li>
+          <li>スタミナシステムの実装</li>
+          <li>プレイヤーランクの実装</li>
+          <li>各種アイテム,装備の管理実装</li>
+          <li>キャラクター,装備のパラメータ計算システム</li>
+          <li>アイテムの受け取り演出,ダイアログ表示</li>
+          <li>アイテムの所持上限判定システム</li>
+          <li>装備,アイテムアイコン周りの実装</li>
+          <li>テキストのカウントアップ,ゲージ遷移演出などの汎用的実装</li>
+          <li>残り時間表示の共通処理作成</li>
+          <li>ランキング用の数値計算システム</li>
+          <li><b>各種サーバー処理のオフライン実装</b></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+  </div>
+</body>
+<script type="text/javascript">
+  window.onload = function() {
+    document.getElementById('loading').classList.add('loaded');
+  }
+</script>
+
+<footer>
+  <p>© 2023 Toma Asai</p>
+</footer>
+
+</html>

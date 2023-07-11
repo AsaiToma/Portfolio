@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Works/AsaiToma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./production.css">
+  <!-- <script type="text/javascript" src="./libs/three.js"></script> -->
+  <!-- barba -->
+  <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.6/dist/barba.umd.min.js" crossOrigin></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- IEでbarbaを読むためのpolyfill -->
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver" crossorigin="anonymous" defer></script> -->
+</head>
+
+<header>
+  <div class="header-right">
+    <a href="../about.html">about</a>
+    <a href="../index.html">works</a>
+  </div>
+
+</header>
+
+
+<body data-barba="wrapper">
+  <div data-barba="container" data-barba-namespace="production">
+
+    <div id="loading">
+
+   </div>
+
+    <div class="top-wrapper">
+      <div class="top-img">
+        <div class="black-filter">
+          <p class="page-title">譜面作成ツール</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <div class="abst-wrapper">
+      <h2>概要</h2>
+        <p>現在趣味で制作中の,音ゲーの譜面を作成できるツールです．</p>
+        <p>制作動悸は,単純に音ゲーというものを一度実装してみたいという興味があったからです．</p>
+        <p>そのうえで,音ゲーを遊ぶだけでなくユーザーがインタラクティブに譜面を作成できる機能があったら面白いのではと考えました．</p>
+        <p>実装は<b>Unity</b>を用いています</p>
+      </div>
+
+
+    <div class="abst-wrapper">
+      <h2>・譜面作成画面</h2>
+        <p>画面下部のボタンをタップ（長押し）することでノーツを登録することができます．</p>
+        <p>ボタンをタップしている間,ノーツがボタンから生成され続けるので,視覚的に確認することができます．</p>
+        <p>グラフの横軸がテキスト画像の座標，縦軸が音量と連動しています. </p>
+        <p>なお,生成されるノーツの長さや速度は,実際にプレイするときのものと同様になります. </p>
+        <p>画面上部のバーは音楽の再生時間,白の数値はノーツ数です. </p>
+      </div>
+
+    <div class="abst-wrapper">
+      <h2>・プレイ画面</h2>
+        <p>実際に作成した譜面を試遊することができます．</p>
+        <p>ユーザーは画面上部から振ってくるノーツに合わせて画面下部のボタンをタップします．</p>
+        <p>成功不成功の判定は,ノーツの生成時間とタップした時刻の誤差から計算しています. </p>
+        <p>画面上部のバーは音楽の再生時間,白の数値はコンボ数です. </p>
+      </div>
+
+    <div class="abst-wrapper">
+      <h2>・展望</h2>
+        <p>今後はボタンの数やノーツ速度などをユーザが設定できるようカスタマイズ性を上げたり,演出系をこだわりっていく予定です．</p>
+      </div>
+
+
+    <div class="movie-wrapper">
+      <div class="youtube">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mlVchlPCPhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</body>
+<script type="text/javascript">
+ window.onload=function(){
+   document.getElementById('loading').classList.add('loaded');
+ }
+ </script>
+
+<footer>
+  <p>© 2023 Toma Asai</p>
+
+</footer>
+
+</html>
