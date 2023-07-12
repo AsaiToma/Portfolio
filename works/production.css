@@ -114,6 +114,10 @@ header {
   font-size: 1.6rem;
 }
 
+.abst-wrapper h2{
+    background-color: #faa087;
+}
+
 .movie-wrapper{
   margin:50px 0;
 }

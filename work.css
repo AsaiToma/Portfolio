@@ -70,9 +70,15 @@ header {
   .product-img {
     float: none;
     width: 100%;
-    max-width: 100%;
     height: 50%;
   }
+}
+
+.product-wrapper h1{
+    background-color: #faa087;
+    height: 50px;
+    line-height:50px;
+    margin-bottom: 50px;
 }
 
 .abst-wrapper {
