@@ -111,7 +111,9 @@ header {
 
 .abst-wrapper a{
   margin-bottom:5px;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  line-height:22px;
+  color:rgb(20,20,250);
 }
 
 .abst-wrapper h2{
